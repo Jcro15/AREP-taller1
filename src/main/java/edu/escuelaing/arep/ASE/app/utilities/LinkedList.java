@@ -2,6 +2,10 @@ package edu.escuelaing.arep.ASE.app.utilities;
 
 import java.util.Iterator;
 
+/**
+ * Lista doblemente encadenada que puede almacenar cualquier tipo de objeto  implementada usando nodos
+ * @param <T> el tipo de los objetos que se van a almacenar
+ */
 public class LinkedList<T> implements Iterable<T> {
 
     private Node<T> head;
@@ -9,11 +13,17 @@ public class LinkedList<T> implements Iterable<T> {
     private int size;
 
 
-
+    /**
+     * crea una nueva LinkedList vacia
+     */
     public LinkedList () {
         size=0;
     }
 
+    /**
+     * Añade un nuevo elemento al final de la lista
+     * @param value el elemento a añadir
+     */
     public void add(T value) {
         Node<T> newNode;
         if(size==0){
@@ -28,6 +38,10 @@ public class LinkedList<T> implements Iterable<T> {
         size++;
     }
 
+    /**
+     * elimina un elemento de la lista
+     * @param element el elemento a eliminar
+     */
     public void remove(T element){
         if(head!=null && head.getValue().equals(element)){
             removeHead();
@@ -50,9 +64,18 @@ public class LinkedList<T> implements Iterable<T> {
         }
     }
 
+    /**
+     *
+     * @return la primera posicion de la lista
+     */
     public Node<T> getHead() {
         return head;
     }
+
+    /**
+     *
+     * @return la ultima posicion de la lista
+     */
     public Node<T> getTail() {
         return tail;
     }
@@ -62,6 +85,10 @@ public class LinkedList<T> implements Iterable<T> {
         return new LinkedListIterator<>(this);
     }
 
+    /**
+     *
+     * @return el tamaño de la lista
+     */
     public int size() {
         return this.size;
     }

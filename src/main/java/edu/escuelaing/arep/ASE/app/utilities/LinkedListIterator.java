@@ -2,13 +2,22 @@ package edu.escuelaing.arep.ASE.app.utilities;
 
 import java.util.Iterator;
 
+/**
+ *  Iterador utilizado para recorrer la lista doblemente encadenada
+ * @param <T> el tipo de los objetos almacenados en la lista
+ */
 public class LinkedListIterator<T> implements Iterator<T> {
 
     private Node<T> current;
 
+    /**
+     * Crea un nuevo iterador para una LinkedList
+     * @param linkedList la LinkedList que se va a iterar
+     */
     public LinkedListIterator(LinkedList<T> linkedList) {
         current= linkedList.getHead();
     }
+
 
     @Override
     public boolean hasNext() {
