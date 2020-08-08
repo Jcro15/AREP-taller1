@@ -4,7 +4,7 @@ El objetivo de este laboratorio crear un programa para calcular la media y
 la desviación estándar de n números reales que se leen a un archivo.
 
 Para esto se creó una implementación propia de una LinkedList y un módulo
-de estadísticas. Los detalles del diseño se pueden encontrar en ...... 
+de estadísticas. Los detalles del diseño se pueden encontrar en el  documento [LabMvnGit.pdf](LabMvnGit.pdf)
 
 En la siguiente tabla se presentan los valores con los que se
 probará la implementación, los valores de la columna 1 se encuentran
